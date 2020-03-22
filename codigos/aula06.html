@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>aula 06 - JS</title>
+</head>
+<body>
+	<script>
+		var d = new Date();		//automatico.
+		//var d = new Date(86400000);	//milisegundos.
+		//var d = new Date("Sat Mar 21 2020 20:42:03 GMT-0300 (Horário Padrão de Brasília)");	//string com a data no formato indicado.
+		//var d = new Date (ano, mes, dia, hota, minuto, segundo, milisegundos);
+		//console.log(d.toString());	//mesma coisa de  so d.
+		//console.log(d.toUTCString());
+		//console.log(d.toDateString());
+		console.log("getDate "+d.getDate());	//da o dia do mes.
+		console.log("getDay "+d.getDay());
+		console.log("getFullYear "+d.getFullYear());
+		console.log("getHours "+d.getHours());
+		console.log("getMilliseconds "+d.getMilliseconds());
+		console.log("getMinutes "+d.getMinutes());
+		console.log("getMonth "+d.getMonth());
+		console.log("getSeconds "+d.getSeconds());
+		console.log("getTime "+d.getTime());
+		//set em vez de get define um valor para o tipo de Date.
+
+
+		function formataData(data = new Date()){
+			var dia = data.getDate();
+			var mes = data.getMonth()+1;
+			var ano = data.getFullYear();
+			if(dia.toString().length == 1)dia = "0"+dia;
+			if(mes.toString().length == 1)mes = "0"+mes;
+
+			return dia+"/"+mes+"/"+ano;
+		}
+
+		console.log(formataData());
+	</script>
+</body>
+</html>

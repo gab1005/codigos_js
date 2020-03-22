@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>aula 09 - JS</title>
+</head>
+<body>
+<!--<body onload= "funcao()">-->
+	<!--onload executa algo apos o carregamento da pagina-->
+
+	<h1 id="demo" onmouseover="funcao1(this)" onmouseout="funcao2(this)">Passe o mouse aqui</h1>
+	
+	<!--
+	<select name="" id="demo" onchange="funcao()">
+		<option value="opcao1">Opção 1</option>
+		<option value="opcao2">Opção 2</option>
+		<option value="opcao3">Opção 3</option>
+	</select>
+	//onchange serve para qualquer mudança.
+	-->
+
+	
+	<!--
+	<p id="demo"></p>
+	<p class="exemplo"></p>
+	<p class="exemplo"></p>
+	<p class="exemplo"></p>
+	-->
+
+	<!--<img id="imagem" src="imagem.jpg" alt="texto alternativo">-->
+
+	<!--<p id="demo">Isso é um teste</p>-->
+
+	<!--<h1 onclick="this.innerHTML = 'obrigado'">Clique aqui</h1>-->
+	<!--this faz referencia ao propio h1, facilita o processo-->
+
+	<!--<h1 onclick="funcao(this)">Clique aqui</h1>-->
+	<!--<h1 id = "demo">Clique aqui</h1>		n deu certo-->
+
+	<script>
+		//document.getElementById("demo").innerHTML = "texto do meu paragrafo";
+		//objeto	metodo		propriedade		valor.
+
+		//console.log(document.getElementsByTagName("p"));
+
+		/*
+		var x = document.getElementsByClassName("exemplo");
+		x[0].innerHTML = "texto 0";
+		x[1].innerHTML = "texto 1";
+		x[2].innerHTML = "texto 2";
+		*/
+
+		//var x = document.querySelectorAll("p.exemplo");		//mais  precisa na busca. nao funciona no internet exploe vesao abaixo do 9.
+		
+		/*
+		depois de document
+		.baseURI/.body/.doctype/.documentURI/.domain/.head/.inputEncoding/.lastModified/.title/.URL/.forms/.links/.imagens/.script
+		*/
+
+		//document.write("texto");
+		//document.getElementById("imagem").src = "foto.jpg";	//troca. valor ou atributo de uma propriedade.
+
+		//document.getElementById("demo").style.color = "red";	//muda css.
+		
+		/*
+		function funcao(){
+			document.getElementById("demo").innerHTML = "obrigado";
+		}
+		document.getElementById("demo").oneclick = funcao;
+		//n deu certo.
+		*/
+
+		function funcao1(elemento){
+			elemento.innerHTML = "ok, mouse sobre o elemento";
+		}
+		function funcao2(elemento){
+			elemento.innerHTML = "passe o mouse aqui";
+		}
+
+		/*
+		onclick/onload/onchange/onmouserover/onmouseout/onfocus/onmousedown/onmouseup
+		onfocus = manter o mouse em cima
+		onmousedown = manter o botao do mouse precionado
+		onmouseup = deixar de segurar o botao do mouse
+		*/
+
+
+	</script>
+</body>
+</html>

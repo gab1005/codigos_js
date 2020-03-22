@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>aula 10 - JS</title>
+</head>
+<body>
+	<div id="msg">
+		
+	</div>
+	<!--
+	<input type="button" value="avancar" onclick="window.history.forward();">
+	<input type="button" value="voltar" onclick="window.history.back();">
+	-->
+
+	<!--<input type="button" value="Cancelar" onclick="clearTimeout(msg)">-->
+	<!--<input type="button" value="Cancelar" onclick="clearInterval(msg)">-->
+	<script>
+		//console.log(window.location.href);	//local do codigo.
+		//window.history.back();
+		//window.history.forward();
+
+		//window.localStorage.setItem("chave", "valor");
+		//window.localStorage.setItem("nome", "Ricardo");	//salva o valor dentro do navegador, mesmo apos reiniciar ele, o dadao ainda vai estar la.
+		//document.getElementById("msg").innerHTML = window.localStorage.getItem("nome");
+
+		//window.sessionStorage.setItem("nome2", "Pedro");	//salvo so por aquela sessao.
+		//document.getElementById("msg").innerHTML = window.sessionStorage.getItem("nome2");
+
+		//window.open("url", "nome da janela", "parametro adicionais: altura e largura")
+		//var janela = window.open("", "nome da janela", "width=500", "heigth=400")
+		//janela.document.write("isso e um texto para minha janela popup");
+		//janela.opener.document.write("isso e um texto para minha janela popup")
+
+		//setTimeout(function(){console.log("msg via timeout")}, 2000);
+		//executa uma funcao (primeiro parametro) depois de um certo tempo em milisegundos (segundo parametro)
+
+		/*
+		setTimeout(msgtimeout, 2000);
+		function msgtimeout(){
+			console.log("msg via timeout");
+		}
+		*/
+
+		/*
+		var msg = setTimeout(msgtimeout, 5000);
+		function msgtimeout(){
+			console.log("msg  via timenout");
+		}
+		*/
+
+		/*
+		var msg = setInterval(msginterval,1000);
+		function msginterval(){
+			console.log("msg  via interval");
+		}
+		*/
+
+		var intervalo = setInterval(verificaFoco, 1000);
+		var contador = 0;
+		function verificaFoco(){
+			if(document.hasFocus()){
+				contador++;
+				console.log(contador);
+				if(contador>=10){
+					msgtimeout();
+					clearInterval(intervalo);
+				}
+			}
+		}
+		//var msg = setTimeout (msgtimeout, 5000);
+		function msgtimeout(){
+			document.getElementById("msg").innerHTML = "obrigado por visitar minha pagina";
+
+		}
+
+	</script>
+</body>
+</html>
